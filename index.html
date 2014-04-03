@@ -22,13 +22,13 @@
 
 			<div class="grid grid-3">
 				<div id="statistics" class="grid-1 alpha header">
-					<h1>Estatística</h1>
+					<h1>Estatísticas</h1>
 					<p ng-show="user">
 						<a href="https://github.com/{{ user.login }}?tab=repositories"><span id="num-repos">{{ user.public_repos }}</span> repositórios públicos</a>
 						<br>
 						<a ng-show="source_repos" href="https://github.com/{{ user.login }}?tab=repositories"><span id="num-source-repos">{{ source_repos }}</span> source repos</a>
 						<br>
-						<strong>{{ user.created_at | ago }}</strong> anos no Github
+						<strong>{{ user.created_at | ago }}</strong> no Github
 					</p>
 				</div>
 
