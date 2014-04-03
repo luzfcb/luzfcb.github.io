@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="github">
 	<head>
-		<title>brutasse.github.io</title>
+		<title>luzfcb.github.io</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet" type="text/css" href="assets/reset.css">
 		<link rel="stylesheet" type="text/css" href="assets/grid.css">
@@ -22,24 +22,24 @@
 
 			<div class="grid grid-3">
 				<div id="statistics" class="grid-1 alpha header">
-					<h1>Statistics</h1>
+					<h1>Estatística</h1>
 					<p ng-show="user">
-						<a href="https://github.com/{{ user.login }}?tab=repositories"><span id="num-repos">{{ user.public_repos }}</span> public repos</a>
+						<a href="https://github.com/{{ user.login }}?tab=repositories"><span id="num-repos">{{ user.public_repos }}</span> repositórios públicos</a>
 						<br>
 						<a ng-show="source_repos" href="https://github.com/{{ user.login }}?tab=repositories"><span id="num-source-repos">{{ source_repos }}</span> source repos</a>
 						<br>
-						<strong>{{ user.created_at | ago }}</strong> of GitHub age
+						<strong>{{ user.created_at | ago }}</strong> anos no Github
 					</p>
 				</div>
 
 				<div id="recently-updated" class="grid-2 omega header">
-					<h1>Recently updated <a href="https://github.com/{{ user.login }}/repositories">View All on GitHub</a></h1>
+					<h1>Atualizado Recentemente <a href="https://github.com/{{ user.login }}/repositories">Veja todos no GitHub</a></h1>
 					<ol id="recently-updated-repos" ng-repeat="repo in recent">
 						<li>
 							<span class="name"><a href="{{ repo.html_url }}">{{ repo.name }}</a></span>
 							<span class="time"><a href="{{ repo.html_url }}/commits">{{ repo.pushed_at | date }}</a></span>
 							<span class="bullet">⋅</span>
-							<span class="watchers"><a href="{{ repo.html_url }}/stargazers">{{ repo.stargazers_count }} stargazers</a></span>
+							<span class="watchers"><a href="{{ repo.html_url }}/stargazers">{{ repo.stargazers_count }} observadores</a></span>
 							<span class="bullet">⋅</span>
 							<span class="forks"><a href="{{ repo.html_url }}/network">{{ repo.forks_count }} forks</a></span>
 						</li>
